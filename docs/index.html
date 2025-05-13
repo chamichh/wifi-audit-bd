@@ -34,27 +34,11 @@
       <tbody>
         
     <tr>
-      <td><strong>Client-Related Issue</strong></td>
-      <td>AR-VR-Hackathon</td>
-      <td>B0:A7:B9:3D:13:CC</td>
-      <td>WPA2 PSK (CCMP-128)</td>
-      <td>-81 dBm</td>
-      <td>WPS Enabled</td>
-    </tr>
-    <tr>
-      <td><strong>Client-Related Issue</strong></td>
-      <td>VRLab</td>
-      <td>CC:2D:E0:8C:76:D3</td>
-      <td>WPA WPA2 PSK (CCMP-128)</td>
-      <td>-71 dBm</td>
-      <td>WPS Enabled</td>
-    </tr>
-    <tr>
       <td><strong>Critical Security Issue</strong></td>
-      <td>ViA</td>
-      <td>20:B3:99:CD:C0:D8</td>
+      <td>Hidden SSID</td>
+      <td>00:13:37:A9:D9:90</td>
       <td>Open</td>
-      <td>-81 dBm</td>
+      <td>-53 dBm</td>
       <td>Open Network</td>
     </tr>
       </tbody>
@@ -63,63 +47,25 @@
     <h2 style="margin-top: 40px;">Detailed Risk Overview</h2>
     
     <div style="margin-bottom: 30px;">
-      <h3 style="margin-bottom: 5px; color: #2c3e50;">AR-VR-Hackathon (B0:A7:B9:3D:13:CC)</h3>
-      
-    <div style="margin-bottom: 15px; border-left: 4px solid #3498DB; padding-left: 12px;">
-      <div style="font-weight: bold; color: #2c3e50;">Client-Related Issue: WPS Enabled</div>
-      <div><strong>Description:</strong> Wi-Fi Protected Setup (WPS) is enabled on this AP, which is known to have vulnerabilities allowing brute-force attacks to obtain the WPA passphrase.</div>
-      <div style="color: #7f8c8d;"><em>Implications:</em> If an attacker successfully exploits WPS, they can gain unauthorized access to the Wi-Fi network, compromising all connected devices and the data they transmit.</div>
-      <div><strong>Recommendation:</strong> Disable WPS on the access point to prevent potential brute-force attacks.</div>
-    </div>
-    <div style="margin-bottom: 15px; border-left: 4px solid #3498DB; padding-left: 12px;">
-      <div style="font-weight: bold; color: #2c3e50;">Exposure Vector: Weak Signal Strength</div>
-      <div><strong>Description:</strong> The signal strength of -81 dBm indicates a weak signal, which may lead to unreliable connections but also allows for easier interception of traffic within close proximity.</div>
-      <div style="color: #7f8c8d;"><em>Implications:</em> An attacker could exploit the weak signal by positioning themselves closer to the AP to intercept data packets or launch attacks like content injection.</div>
-      <div><strong>Recommendation:</strong> Consider repositioning the AP for improved coverage or enhancing the signal strength through better antennas.</div>
-    </div>
-    </div>
-    <div style="margin-bottom: 30px;">
-      <h3 style="margin-bottom: 5px; color: #2c3e50;">VRLab (CC:2D:E0:8C:76:D3)</h3>
-      
-    <div style="margin-bottom: 15px; border-left: 4px solid #3498DB; padding-left: 12px;">
-      <div style="font-weight: bold; color: #2c3e50;">Client-Related Issue: WPS Enabled</div>
-      <div><strong>Description:</strong> Wi-Fi Protected Setup (WPS) is enabled on the AP.</div>
-      <div style="color: #7f8c8d;"><em>Implications:</em> WPS can be vulnerable to brute-force attacks, potentially allowing unauthorized access to the network if the PIN is compromised.</div>
-      <div><strong>Recommendation:</strong> Disable WPS to mitigate the risk of unauthorized access.</div>
-    </div>
-    <div style="margin-bottom: 15px; border-left: 4px solid #3498DB; padding-left: 12px;">
-      <div style="font-weight: bold; color: #2c3e50;">Exposure Vector: Signal Strength</div>
-      <div><strong>Description:</strong> The signal strength is at -71 dBm, which while functional, could be improved.</div>
-      <div style="color: #7f8c8d;"><em>Implications:</em> Lower signal strength can make the AP less accessible for legitimate users while still being detectable by potential attackers, increasing the likelihood of successful attacks from outside the intended coverage area.</div>
-      <div><strong>Recommendation:</strong> Consider adjusting the placement or power of the access point to improve signal strength.</div>
-    </div>
-    <div style="margin-bottom: 15px; border-left: 4px solid #3498DB; padding-left: 12px;">
-      <div style="font-weight: bold; color: #2c3e50;">Client-Related Issue: No Clients Detected</div>
-      <div><strong>Description:</strong> Currently, there are no client devices associated with this access point.</div>
-      <div style="color: #7f8c8d;"><em>Implications:</em> The absence of clients may indicate that the AP is new or not utilized, but it also raises questions about its effectiveness in providing connectivity.</div>
-      <div><strong>Recommendation:</strong> Conduct regular monitoring to ensure that clients can connect without issues and assess the need for this AP in the network.</div>
-    </div>
-    </div>
-    <div style="margin-bottom: 30px;">
-      <h3 style="margin-bottom: 5px; color: #2c3e50;">ViA (20:B3:99:CD:C0:D8)</h3>
+      <h3 style="margin-bottom: 5px; color: #2c3e50;">Hidden SSID (00:13:37:A9:D9:90)</h3>
       
     <div style="margin-bottom: 15px; border-left: 4px solid #3498DB; padding-left: 12px;">
       <div style="font-weight: bold; color: #2c3e50;">Critical Security Issue: Open Network</div>
-      <div><strong>Description:</strong> The access point is configured with open encryption, allowing any nearby device to connect without authentication.</div>
-      <div style="color: #7f8c8d;"><em>Implications:</em> This poses a significant security risk as unauthorized users can access the network, potentially leading to data theft and unauthorized use of network resources.</div>
-      <div><strong>Recommendation:</strong> Implement WPA3 or at least WPA2 encryption with strong, complex passwords to secure the network.</div>
+      <div><strong>Description:</strong> The access point has an open encryption configuration, allowing any device to connect without authentication.</div>
+      <div style="color: #7f8c8d;"><em>Implications:</em> This poses a significant security risk as unauthorized users can access the network, potentially leading to data interception and other malicious activities.</div>
+      <div><strong>Recommendation:</strong> Configure WPA2 or WPA3 encryption to secure the network and require authentication for all devices.</div>
     </div>
     <div style="margin-bottom: 15px; border-left: 4px solid #3498DB; padding-left: 12px;">
-      <div style="font-weight: bold; color: #2c3e50;">Exposure Vector: Low Signal Strength</div>
-      <div><strong>Description:</strong> The signal strength of the access point is measured at -81 dBm, which is considered weak.</div>
-      <div style="color: #7f8c8d;"><em>Implications:</em> Weak signals may allow for easier eavesdropping by attackers who can intercept data packets from a further distance.</div>
-      <div><strong>Recommendation:</strong> Increase the transmission power of the access point or adjust its placement to enhance signal strength.</div>
+      <div style="font-weight: bold; color: #2c3e50;">Exposure Vector: Hidden SSID</div>
+      <div><strong>Description:</strong> The SSID of the access point is hidden, which can lead to confusion or unwitting connections by users to other rogue APs with similar SSIDs.</div>
+      <div style="color: #7f8c8d;"><em>Implications:</em> This exposes users to risks of connecting to spoofed networks which may appear as legitimate, increasing the chances of man-in-the-middle attacks.</div>
+      <div><strong>Recommendation:</strong> Consider broadcasting the SSID to increase transparency or educate users about the risks of hidden networks.</div>
     </div>
     <div style="margin-bottom: 15px; border-left: 4px solid #3498DB; padding-left: 12px;">
-      <div style="font-weight: bold; color: #2c3e50;">Client-Related Issue: Lack of Client Devices</div>
-      <div><strong>Description:</strong> The access point currently has no associated client devices (client count is 0).</div>
-      <div style="color: #7f8c8d;"><em>Implications:</em> While there are no immediate threats from clients, it is essential to remain vigilant for unauthorized device connections when the network is operational.</div>
-      <div><strong>Recommendation:</strong> Monitor network activity regularly to ensure no unauthorized devices connect once the network is active.</div>
+      <div style="font-weight: bold; color: #2c3e50;">Exposure Vector: Good Signal Strength but No Clients</div>
+      <div><strong>Description:</strong> The access point has a strong signal strength (-53 dBm) but no clients connected.</div>
+      <div style="color: #7f8c8d;"><em>Implications:</em> While the signal strength is good, the lack of clients could indicate that users are avoiding the network due to its open nature, posing an opportunity for unauthorized access if unsupervised.</div>
+      <div><strong>Recommendation:</strong> Review the necessity of this access point and consider securing it or disabling it to prevent potential abuse.</div>
     </div>
     </div>
 
