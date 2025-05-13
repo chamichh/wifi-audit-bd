@@ -19,7 +19,7 @@
 <body>
   <div class="container">
     <h1>Selected WiFi Networks for Active Testing</h1>
-    <p class="audit-time">Audit done at: 5/13/2025, 11:53:39 AM</p>
+    <p class="audit-time">Audit done at: 13.05.2025 14:56:12 (Riga, LV)</p>
     <p>This table lists prioritized WiFi targets. Detailed risk analysis is provided below the table.</p>
 
     <table>
@@ -68,66 +68,78 @@
       <h3 style="margin-bottom: 5px; color: #2c3e50;">Hidden SSID (00:13:37:A9:D9:90)</h3>
       
     <div style="margin-bottom: 15px; border-left: 4px solid #3498DB; padding-left: 12px;">
-      <div style="font-weight: bold; color: #2c3e50;">Critical Security Issue: Open Network Configuration</div>
-      <div><strong>Description:</strong> The WiFi access point is configured with no encryption, allowing anyone nearby to connect without authentication.</div>
-      <div style="color: #7f8c8d;"><em>Implications:</em> This poses a significant security risk as unauthorized users can access the network, potentially leading to data interception, unauthorized access to devices, and misuse of network resources.</div>
-      <div><strong>Recommendation:</strong> Implement WPA2 or WPA3 encryption to secure the wireless network and require authentication for access.</div>
+      <div style="font-weight: bold; color: #2c3e50;">Critical Security Issue: Open Network</div>
+      <div><strong>Description:</strong> The access point is configured without encryption, allowing any client to connect without authentication.</div>
+      <div style="color: #7f8c8d;"><em>Implications:</em> This could allow unauthorized users to access the network and intercept any data transmitted over it.</div>
+      <div><strong>Recommendation:</strong> Implement WPA3 or at least WPA2 with a strong passphrase to secure the network.</div>
     </div>
     <div style="margin-bottom: 15px; border-left: 4px solid #3498DB; padding-left: 12px;">
       <div style="font-weight: bold; color: #2c3e50;">Exposure Vector: Hidden SSID</div>
-      <div><strong>Description:</strong> The SSID is not broadcasted, meaning that it is hidden from casual observers.</div>
-      <div style="color: #7f8c8d;"><em>Implications:</em> While hiding the SSID can deter casual users from trying to connect, it may also encourage more determined attackers to probe for the network, using various tools to discover the network's presence.</div>
-      <div><strong>Recommendation:</strong> Consider broadcasting the SSID to allow known users to connect easily, while employing strong encryption for security.</div>
+      <div><strong>Description:</strong> The SSID of the access point is hidden, which can provide a false sense of security.</div>
+      <div style="color: #7f8c8d;"><em>Implications:</em> While it may deter casual users from connecting, determined attackers can still detect and exploit the network, and legitimate users may have difficulty connecting.</div>
+      <div><strong>Recommendation:</strong> Consider broadcasting the SSID and implementing other security measures to enhance network security.</div>
+    </div>
+    <div style="margin-bottom: 15px; border-left: 4px solid #3498DB; padding-left: 12px;">
+      <div style="font-weight: bold; color: #2c3e50;">Exposure Vector: Low Signal Strength</div>
+      <div><strong>Description:</strong> The signal strength of the access point is -53 dBm, which indicates a fairly strong signal close to the AP but may be weaker at range.</div>
+      <div style="color: #7f8c8d;"><em>Implications:</em> Weak signals can make it easier for attackers to monitor traffic without being detected, especially in areas where the signal may extend beyond intended coverage areas.</div>
+      <div><strong>Recommendation:</strong> Adjust the power settings of the access point to limit coverage to the intended area while enhancing security measures.</div>
+    </div>
+    <div style="margin-bottom: 15px; border-left: 4px solid #3498DB; padding-left: 12px;">
+      <div style="font-weight: bold; color: #2c3e50;">Client-Related Issue: No Connected Clients</div>
+      <div><strong>Description:</strong> There are currently no clients connected to the access point.</div>
+      <div style="color: #7f8c8d;"><em>Implications:</em> While this eliminates immediate security concerns regarding client devices, it suggests the network may not be in use or not configured for user access.</div>
+      <div><strong>Recommendation:</strong> Review the network configuration to ensure it encourages secure client connections when needed.</div>
     </div>
     </div>
     <div style="margin-bottom: 30px;">
       <h3 style="margin-bottom: 5px; color: #2c3e50;">Hidden SSID (20:37:06:62:0E:88)</h3>
       
     <div style="margin-bottom: 15px; border-left: 4px solid #3498DB; padding-left: 12px;">
-      <div style="font-weight: bold; color: #2c3e50;">Critical Security Issue: Weak Encryption Protocol (TKIP)</div>
-      <div><strong>Description:</strong> The access point is using WPA PSK with TKIP, which is considered weak and susceptible to various attacks, such as replay attacks or statistical attacks.</div>
-      <div style="color: #7f8c8d;"><em>Implications:</em> This weakness can lead to unauthorized access to the network, compromising sensitive data and resources.</div>
-      <div><strong>Recommendation:</strong> Upgrade the encryption to WPA3 or at minimum WPA2 with AES to enhance security.</div>
+      <div style="font-weight: bold; color: #2c3e50;">Critical Security Issue: Weak Encryption Protocol</div>
+      <div><strong>Description:</strong> The access point uses WPA PSK with TKIP encryption, which is considered weak and vulnerable to various attacks.</div>
+      <div style="color: #7f8c8d;"><em>Implications:</em> An attacker can exploit vulnerabilities in TKIP to gain unauthorized access to the network and intercept data being transmitted.</div>
+      <div><strong>Recommendation:</strong> Upgrade the encryption protocol to WPA2 or WPA3. This will significantly improve the security posture of the wireless network.</div>
     </div>
     <div style="margin-bottom: 15px; border-left: 4px solid #3498DB; padding-left: 12px;">
       <div style="font-weight: bold; color: #2c3e50;">Exposure Vector: Hidden SSID</div>
-      <div><strong>Description:</strong> The SSID is hidden, which may give a false sense of security while not preventing determined attackers from discovering the network.</div>
-      <div style="color: #7f8c8d;"><em>Implications:</em> An attacker can still discover the network through other means, such as monitoring traffic, leading to potential unauthorized access.</div>
-      <div><strong>Recommendation:</strong> Consider broadcasting the SSID to improve network visibility and security through enhanced monitoring.</div>
+      <div><strong>Description:</strong> The SSID is hidden, which can provide a false sense of security.</div>
+      <div style="color: #7f8c8d;"><em>Implications:</em> While hiding the SSID may deter casual users from detecting the network, it does not prevent determined attackers from discovering it and can complicate legitimate user access.</div>
+      <div><strong>Recommendation:</strong> Consider making the SSID visible to improve usability, while ensuring that strong security measures are in place.</div>
     </div>
     <div style="margin-bottom: 15px; border-left: 4px solid #3498DB; padding-left: 12px;">
       <div style="font-weight: bold; color: #2c3e50;">Exposure Vector: Low Signal Strength</div>
-      <div><strong>Description:</strong> The signal strength of -63 dBm is relatively low, which could impact connectivity and reliability but is also indicative of potential coverage limitations.</div>
-      <div style="color: #7f8c8d;"><em>Implications:</em> Users may face temporary connectivity issues, and low signal also indicates the AP could be farther from users than optimal, increasing the likelihood of interference or attacks when users are connected.</div>
-      <div><strong>Recommendation:</strong> Ensure the access point is optimally located to cover necessary areas with adequate signal strength, potentially repositioning or adding additional access points for coverage.</div>
+      <div><strong>Description:</strong> The signal strength is -63 dBm, which is moderate and may indicate a limited coverage area.</div>
+      <div style="color: #7f8c8d;"><em>Implications:</em> Weak signals can lead to poor connections, encouraging users to seek out alternate networks, increasing the risk that they may connect to rogue APs.</div>
+      <div><strong>Recommendation:</strong> Assess the placement of the access point to improve signal strength and ensure adequate coverage for legitimate users.</div>
     </div>
     </div>
     <div style="margin-bottom: 30px;">
       <h3 style="margin-bottom: 5px; color: #2c3e50;">Hidden SSID (3A:47:5E:08:93:94)</h3>
       
     <div style="margin-bottom: 15px; border-left: 4px solid #3498DB; padding-left: 12px;">
-      <div style="font-weight: bold; color: #2c3e50;">Exposure Vector: Hidden SSID</div>
-      <div><strong>Description:</strong> The SSID of the access point is hidden, which can lead to confusion among legitimate users and provide a false sense of security.</div>
-      <div style="color: #7f8c8d;"><em>Implications:</em> While it may discourage casual users, hiding the SSID does not prevent determined attackers from discovering the network. Moreover, it complicates connection for legitimate users.</div>
-      <div><strong>Recommendation:</strong> Consider whether hiding the SSID is truly necessary. If possible, make the SSID visible to ensure legitimate users can easily connect.</div>
+      <div style="font-weight: bold; color: #2c3e50;">Exposure Vector: Hidden SSID Configuration</div>
+      <div><strong>Description:</strong> The access point is configured to use a hidden SSID, making it less visible to casual attackers but not effectively securing the network.</div>
+      <div style="color: #7f8c8d;"><em>Implications:</em> Concealing the SSID can lead to false security; adept attackers can discover the hidden SSID through various techniques, exposing the network to attacks.</div>
+      <div><strong>Recommendation:</strong> Consider making the SSID visible to enhance security through correct configurations and monitoring.</div>
     </div>
     <div style="margin-bottom: 15px; border-left: 4px solid #3498DB; padding-left: 12px;">
-      <div style="font-weight: bold; color: #2c3e50;">Client-Related Issue: No WPS Enabled</div>
-      <div><strong>Description:</strong> WPS (Wi-Fi Protected Setup) is turned off, which is generally a good practice to increase security, but may limit connectivity options for some users.</div>
-      <div style="color: #7f8c8d;"><em>Implications:</em> While disabling WPS eliminates the vulnerabilities associated with this feature, it may also lead to missed opportunities for easier device connections, particularly for those less familiar with technical configurations. However, it's preferable not to have WPS enabled due to its known security weaknesses.</div>
-      <div><strong>Recommendation:</strong> Keep WPS disabled unless absolutely required for specific devices.</div>
+      <div style="font-weight: bold; color: #2c3e50;">Exposure Vector: Signal Strength Considerations</div>
+      <div><strong>Description:</strong> The signal strength of -61 dBm indicates a moderate signal that could extend outside the intended coverage area.</div>
+      <div style="color: #7f8c8d;"><em>Implications:</em> A signal that extends too far can attract unintended clients and attackers who may be within range, increasing the chance of unauthorized access.</div>
+      <div><strong>Recommendation:</strong> Adjust the transmission power or improve physical security to restrict signal reach to authorized users.</div>
     </div>
     <div style="margin-bottom: 15px; border-left: 4px solid #3498DB; padding-left: 12px;">
-      <div style="font-weight: bold; color: #2c3e50;">Exposure Vector: Signal Strength</div>
-      <div><strong>Description:</strong> The signal strength of -61 dBm indicates the AP is at a reasonable distance from potential clients or obstacles that may interfere with connectivity.</div>
-      <div style="color: #7f8c8d;"><em>Implications:</em> This signal strength may limit the effective range of the network, possibly leading to a smaller coverage area. It can also provide opportunities for attackers to launch denial-of-service attacks within its effective range.</div>
-      <div><strong>Recommendation:</strong> Monitor the placement of the AP to ensure optimal coverage without unnecessary exposure to potential attackers.</div>
+      <div style="font-weight: bold; color: #2c3e50;">Client-Related Issue: No Client Devices Connected</div>
+      <div><strong>Description:</strong> No client devices are currently associated with the access point, while this may seem secure, it could also indicate a lack of usage or configuration issues.</div>
+      <div style="color: #7f8c8d;"><em>Implications:</em> If the network is often unused, it increases the risk that proper security monitoring is neglected. Alternatively, it may be misconfigured, leading to a lack of clients associate.</div>
+      <div><strong>Recommendation:</strong> Regularly monitor the AP configurations and client associations to ensure it operates as intended.</div>
     </div>
     <div style="margin-bottom: 15px; border-left: 4px solid #3498DB; padding-left: 12px;">
-      <div style="font-weight: bold; color: #2c3e50;">Client-Related Issue: Hidden Network</div>
-      <div><strong>Description:</strong> The network is configured to be hidden, which can discourage casual users from connecting but does not provide true security.</div>
-      <div style="color: #7f8c8d;"><em>Implications:</em> Hiding the SSID does not protect the network; determined attackers can still discover the network using various tools. It can stress user experience as clients must know the SSID in order to connect.</div>
-      <div><strong>Recommendation:</strong> Assess the necessity of keeping the SSID hidden and evaluate the trade-offs in usability versus perceived security.</div>
+      <div style="font-weight: bold; color: #2c3e50;">Client-Related Issue: Lack of WPS</div>
+      <div><strong>Description:</strong> The WiFi Protected Setup (WPS) feature is disabled, which can enhance security for unauthorized access from clients.</div>
+      <div style="color: #7f8c8d;"><em>Implications:</em> While disabling WPS is generally a good move since it eliminates certain vulnerabilities, it could also complicate the process for legitimate users to connect easily if they are relying on WPS for quick access.</div>
+      <div><strong>Recommendation:</strong> Ensure that users have alternative secure methods to connect and consider whether WPS might be safely enabled if user convenience is a priority.</div>
     </div>
     </div>
 
