@@ -19,7 +19,7 @@
 <body>
   <div class="container">
     <h1>Selected WiFi Networks for Active Testing</h1>
-    <p class="audit-time">Audit done at: 16.05.2025 11:16:59 (Riga, LV)</p>
+    <p class="audit-time">Audit done at: 16.05.2025 11:40:54 (Riga, LV)</p>
     <p>This table lists prioritized WiFi targets. Detailed risk analysis is provided below the table.</p>
 
     <table>
@@ -40,16 +40,8 @@
       <td>Hidden SSID</td>
       <td>00:13:37:A9:D9:90</td>
       <td>Open</td>
-      <td>-33 dBm</td>
+      <td>-8 dBm</td>
       <td>Open Network</td>
-    </tr>
-    <tr>
-      <td><strong>Client-Related Issue</strong></td>
-      <td>Hidden SSID</td>
-      <td>76:AC:B9:1D:79:A0</td>
-      <td>WPA2 PSK (CCMP-128)</td>
-      <td>-61 dBm</td>
-      <td>WPS Disabled</td>
     </tr>
       </tbody>
     </table>
@@ -61,55 +53,27 @@
       
     <div style="margin-bottom: 15px; border-left: 4px solid #3498DB; padding-left: 12px;">
       <div style="font-weight: bold; color: #2c3e50;">Critical Security Issue: Open Network</div>
-      <div><strong>Description:</strong> The network is configured with open encryption, allowing any device within range to connect without authentication.</div>
-      <div style="color: #7f8c8d;"><em>Implications:</em> This poses a severe risk as unauthorized users can access the network, leading to potential data breaches or malicious activities.</div>
-      <div><strong>Recommendation:</strong> Implement WPA2 or WPA3 encryption to secure the network.</div>
+      <div><strong>Description:</strong> The access point uses open encryption, making it accessible to any device without authentication.</div>
+      <div style="color: #7f8c8d;"><em>Implications:</em> This allows any device to connect to the network, potentially leading to unauthorized access and data interception.</div>
+      <div><strong>Recommendation:</strong> Implement WPA2 or WPA3 encryption to secure the network and authenticate users.</div>
     </div>
     <div style="margin-bottom: 15px; border-left: 4px solid #3498DB; padding-left: 12px;">
       <div style="font-weight: bold; color: #2c3e50;">Exposure Vector: Hidden SSID</div>
-      <div><strong>Description:</strong> The SSID is hidden, which may deter casual users from connecting, but does not provide real security as determined attackers can still discover it.</div>
-      <div style="color: #7f8c8d;"><em>Implications:</em> While hiding the SSID can potentially lessen the visibility, it may give a false sense of security and does not prevent targeted attacks.</div>
-      <div><strong>Recommendation:</strong> Consider whether hiding the SSID is necessary and if it is worth the trade-off; it may be more beneficial to have a visible network with proper security.</div>
+      <div><strong>Description:</strong> The SSID is hidden, which might give a false sense of security.</div>
+      <div style="color: #7f8c8d;"><em>Implications:</em> While it can deter casual users, hidden SSIDs can still be discovered with enough effort. This method does not prevent serious attacks.</div>
+      <div><strong>Recommendation:</strong> Consider making the SSID visible to improve security awareness and monitor connections more effectively.</div>
     </div>
     <div style="margin-bottom: 15px; border-left: 4px solid #3498DB; padding-left: 12px;">
       <div style="font-weight: bold; color: #2c3e50;">Exposure Vector: Strong Signal Strength</div>
-      <div><strong>Description:</strong> The signal strength is at -33 dBm, indicating a very strong signal.</div>
-      <div style="color: #7f8c8d;"><em>Implications:</em> This strong signal may attract attackers in close proximity, as they can easily detect and exploit vulnerabilities in the open network.</div>
-      <div><strong>Recommendation:</strong> If not needed, reduce the broadcast power of the AP to limit the range of the network and potential unauthorized access.</div>
+      <div><strong>Description:</strong> The access point has a strong signal strength of -8 dBm.</div>
+      <div style="color: #7f8c8d;"><em>Implications:</em> Such a strong signal may lead to the network being accessible outside its intended coverage area, increasing the risk of unauthorized access.</div>
+      <div><strong>Recommendation:</strong> Ensure proper physical security measures are in place and consider adjusting the transmission power if unnecessary coverage exists.</div>
     </div>
     <div style="margin-bottom: 15px; border-left: 4px solid #3498DB; padding-left: 12px;">
-      <div style="font-weight: bold; color: #2c3e50;">Client-Related Issue: No Clients Detected</div>
-      <div><strong>Description:</strong> There are currently no client devices associated with this AP, reducing the immediate risk of client-related attacks.</div>
-      <div style="color: #7f8c8d;"><em>Implications:</em> While no clients are connected, this may change as the network is open, and any unauthorized user can join in the future.</div>
-      <div><strong>Recommendation:</strong> Regularly monitor for connected clients and establish policies for client device management and access control.</div>
-    </div>
-    </div>
-    <div style="margin-bottom: 30px;">
-      <h3 style="margin-bottom: 5px; color: #2c3e50;">Hidden SSID (76:AC:B9:1D:79:A0)</h3>
-      
-    <div style="margin-bottom: 15px; border-left: 4px solid #3498DB; padding-left: 12px;">
-      <div style="font-weight: bold; color: #2c3e50;">Exposure Vector: Hidden SSID</div>
-      <div><strong>Description:</strong> The SSID of the access point is hidden, which can discourage casual users but does not provide real security.</div>
-      <div style="color: #7f8c8d;"><em>Implications:</em> This can lead to false confidence in security and may prompt unauthorized users to try and connect through brute force attacks or various scanning methods.</div>
-      <div><strong>Recommendation:</strong> Consider using a visible SSID and implement strong network security practices instead.</div>
-    </div>
-    <div style="margin-bottom: 15px; border-left: 4px solid #3498DB; padding-left: 12px;">
-      <div style="font-weight: bold; color: #2c3e50;">Exposure Vector: Low Signal Strength</div>
-      <div><strong>Description:</strong> The signal strength of -61 dBm indicates moderate range, making it easier for attackers within proximity to attempt to access the network.</div>
-      <div style="color: #7f8c8d;"><em>Implications:</em> Low signal strength may reduce security as it can attract unauthorized access attempts from neighboring areas.</div>
-      <div><strong>Recommendation:</strong> Evaluate the placement of the access point to ensure adequate signal strength in intended areas and reduce exposure.</div>
-    </div>
-    <div style="margin-bottom: 15px; border-left: 4px solid #3498DB; padding-left: 12px;">
-      <div style="font-weight: bold; color: #2c3e50;">Client-Related Issue: WPS Disabled</div>
-      <div><strong>Description:</strong> WPS (Wi-Fi Protected Setup) is disabled in this configuration, which prevents automated connections without compromising security.</div>
-      <div style="color: #7f8c8d;"><em>Implications:</em> While this reduces some risks, non-use of WPS can also keep devices from connecting easily for legitimate users if needed in future.</div>
-      <div><strong>Recommendation:</strong> If connecting devices frequently, consider enabling WPS with proper safeguards, or ensure users are educated on manual connect procedures.</div>
-    </div>
-    <div style="margin-bottom: 15px; border-left: 4px solid #3498DB; padding-left: 12px;">
-      <div style="font-weight: bold; color: #2c3e50;">Client-Related Issue: No Client Devices Observed</div>
-      <div><strong>Description:</strong> Currently, no clients are connected to the access point, indicating a low risk of client-related attacks at this moment.</div>
-      <div style="color: #7f8c8d;"><em>Implications:</em> Without connected clients, the immediate risk is lower, but potential future clients might be vulnerable if security practices are not enforced.</div>
-      <div><strong>Recommendation:</strong> Regularly review security settings and share awareness with future device users to ensure strong security practices.</div>
+      <div style="font-weight: bold; color: #2c3e50;">Client-Related Issue: No Connected Clients</div>
+      <div><strong>Description:</strong> There are currently no clients connected to the access point.</div>
+      <div style="color: #7f8c8d;"><em>Implications:</em> While this may imply a lower risk at the moment, a lack of clients does not remove the potential for attacks targeting the access point itself.</div>
+      <div><strong>Recommendation:</strong> It’s crucial to monitor the access point regularly for any unauthorized attempts to connect.</div>
     </div>
     </div>
 
