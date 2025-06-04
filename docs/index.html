@@ -19,7 +19,7 @@
 <body>
   <div class="container">
     <h1>WiFi Evil Twin Audit</h1>
-    <p class="audit-time">Audit done at: 04.06.2025 15:04:25 (Riga, LV)</p>
+    <p class="audit-time">Audit done at: 04.06.2025 15:33:05 (Riga, LV)</p>
     <p>Rows in <span style="background:#ffcccc; padding:2px 5px;">red</span> are detected as Evil Twin based on real attacker logic.</p>
 
     <table>
@@ -37,10 +37,10 @@
         
     <tr style="">
       <td>High</td>
-      <td>ViA</td>
-      <td>20:B3:99:CD:C1:A8</td>
+      <td>Hidden SSID</td>
+      <td>00:13:37:A9:D9:90</td>
       <td>Open</td>
-      <td>-49 dBm</td>
+      <td>-19 dBm</td>
       <td></td>
     </tr>
     <tr style="">
@@ -48,13 +48,13 @@
       <td>ViA</td>
       <td>20:B3:99:CD:C0:D8</td>
       <td>Open</td>
-      <td>-85 dBm</td>
+      <td>-69 dBm</td>
       <td></td>
     </tr>
     <tr style="">
       <td>High</td>
       <td>ViA</td>
-      <td>20:B3:99:CD:C2:B8</td>
+      <td>20:B3:99:CD:C2:88</td>
       <td>Open</td>
       <td>-89 dBm</td>
       <td></td>
@@ -65,19 +65,19 @@
     <h2 style="margin-top: 40px;">Detailed Risk Overview</h2>
     
     <div style="margin-bottom: 30px;">
-      <h3 style="margin-bottom: 5px; color: #2c3e50;">ViA (20:B3:99:CD:C1:A8)</h3>
+      <h3 style="margin-bottom: 5px; color: #2c3e50;">Hidden SSID (00:13:37:A9:D9:90)</h3>
       
     <div style="margin-bottom: 15px; border-left: 4px solid #3498DB; padding-left: 12px;">
       <div style="font-weight: bold; color: #2c3e50;">Critical Security Issue: Open Network</div>
-      <div><strong>Description:</strong> The WiFi access point is configured with open encryption, allowing unauthenticated access to the network.</div>
-      <div style="color: #7f8c8d;"><em>Implications:</em> This setting allows any device to connect to the network without a password, leading to potential unauthorized access and data interception.</div>
-      <div><strong>Recommendation:</strong> Implement strong encryption (WPA2 or WPA3) to secure the network and require authentication for connection.</div>
+      <div><strong>Description:</strong> The access point is configured with no encryption, allowing anyone within range to connect without authentication.</div>
+      <div style="color: #7f8c8d;"><em>Implications:</em> This poses a severe risk as unauthorized users can access the network, potentially leading to data theft or network intrusion.</div>
+      <div><strong>Recommendation:</strong> Implement WPA2 or WPA3 encryption to secure the network and require authentication for access.</div>
     </div>
     <div style="margin-bottom: 15px; border-left: 4px solid #3498DB; padding-left: 12px;">
-      <div style="font-weight: bold; color: #2c3e50;">Exposure Vector: Low Signal Strength</div>
-      <div><strong>Description:</strong> Although the signal strength is currently adequate, the presence of an open network can easily attract nearby unauthorized users.</div>
-      <div style="color: #7f8c8d;"><em>Implications:</em> An open network with good signal strength can be exploited by nearby malicious users for unauthorized access and data manipulation.</div>
-      <div><strong>Recommendation:</strong> Closing the network and improving encryption will significantly reduce the exposure.</div>
+      <div style="font-weight: bold; color: #2c3e50;">Exposure Vector: Hidden SSID</div>
+      <div><strong>Description:</strong> The SSID is hidden, which may provide a false sense of security while allowing ease of discovery by determined attackers.</div>
+      <div style="color: #7f8c8d;"><em>Implications:</em> Hiding the SSID does not prevent attackers from detecting the network and can lead to attackers using association probes to identify clients.</div>
+      <div><strong>Recommendation:</strong> Consider broadcasting the SSID to provide transparency, and focus on strong encryption instead of relying solely on SSID hiding.</div>
     </div>
     </div>
     <div style="margin-bottom: 30px;">
@@ -85,31 +85,31 @@
       
     <div style="margin-bottom: 15px; border-left: 4px solid #3498DB; padding-left: 12px;">
       <div style="font-weight: bold; color: #2c3e50;">Critical Security Issue: Open Network</div>
-      <div><strong>Description:</strong> The access point has no encryption, allowing unauthorized access to the network.</div>
-      <div style="color: #7f8c8d;"><em>Implications:</em> Data transmitted over this network can be intercepted easily by any unauthorized users, leading to potential data breaches.</div>
-      <div><strong>Recommendation:</strong> Implement WPA3 or at least WPA2 encryption to secure the wireless network.</div>
+      <div><strong>Description:</strong> The WiFi access point is configured with open encryption, allowing any device to connect without a password.</div>
+      <div style="color: #7f8c8d;"><em>Implications:</em> This leaves the network exposed to unauthorized access and potential misuse by malicious actors.</div>
+      <div><strong>Recommendation:</strong> Implement WPA2 or WPA3 encryption with a strong password to secure the network.</div>
     </div>
     <div style="margin-bottom: 15px; border-left: 4px solid #3498DB; padding-left: 12px;">
-      <div style="font-weight: bold; color: #2c3e50;">Exposure Vector: Weak Signal Strength</div>
-      <div><strong>Description:</strong> A signal strength of -85 dBm is considered weak, which may limit the coverage area but can increase susceptibility to attackers.</div>
-      <div style="color: #7f8c8d;"><em>Implications:</em> Weak signals can allow attackers to intercept communications more easily from a distance, and it may also lead to the use of rogue APs that mimic the legitimate one.</div>
-      <div><strong>Recommendation:</strong> Consider relocating the access point or using a signal booster to enhance coverage while making sure to maintain proper security measures.</div>
+      <div style="font-weight: bold; color: #2c3e50;">Exposure Vector: Moderate Signal Strength</div>
+      <div><strong>Description:</strong> The signal strength is -69 dBm, which is somewhat weak and might allow for eavesdropping from outside the intended coverage area.</div>
+      <div style="color: #7f8c8d;"><em>Implications:</em> This could allow attackers from outside the physical premises to gain access to the network traffic.</div>
+      <div><strong>Recommendation:</strong> Consider repositioning the access point to enhance signal strength or using directional antennas to limit external access.</div>
     </div>
     </div>
     <div style="margin-bottom: 30px;">
-      <h3 style="margin-bottom: 5px; color: #2c3e50;">ViA (20:B3:99:CD:C2:B8)</h3>
+      <h3 style="margin-bottom: 5px; color: #2c3e50;">ViA (20:B3:99:CD:C2:88)</h3>
       
     <div style="margin-bottom: 15px; border-left: 4px solid #3498DB; padding-left: 12px;">
       <div style="font-weight: bold; color: #2c3e50;">Critical Security Issue: Open Network</div>
-      <div><strong>Description:</strong> The access point is configured to use open encryption, allowing any device to connect to the network without authentication.</div>
-      <div style="color: #7f8c8d;"><em>Implications:</em> This poses a high security risk as unauthorized users can access the network, potentially leading to data breaches or unauthorized network usage.</div>
-      <div><strong>Recommendation:</strong> Implement WPA3 or at least WPA2 encryption for the wireless network to secure client connections.</div>
+      <div><strong>Description:</strong> The WiFi access point is configured as an open network without encryption, allowing any device within range to connect without credentials.</div>
+      <div style="color: #7f8c8d;"><em>Implications:</em> This exposes the network to unauthorized access and potential data interception by malicious actors.</div>
+      <div><strong>Recommendation:</strong> Implement WPA2 or WPA3 encryption to secure the network.</div>
     </div>
     <div style="margin-bottom: 15px; border-left: 4px solid #3498DB; padding-left: 12px;">
-      <div style="font-weight: bold; color: #2c3e50;">Exposure Vector: Weak Signal Strength</div>
-      <div><strong>Description:</strong> The signal strength of the access point is -89 dBm, which is considered weak.</div>
-      <div style="color: #7f8c8d;"><em>Implications:</em> Weak signal strength may lead to unstable connections and an increase in the risk of exploitation as attackers can easily overhear communications from a close distance.</div>
-      <div><strong>Recommendation:</strong> Consider relocating the access point to a more central location or upgrading the hardware to improve signal strength.</div>
+      <div style="font-weight: bold; color: #2c3e50;">Exposure Vector: Low Signal Strength</div>
+      <div><strong>Description:</strong> The signal strength of -89 dBm indicates a weak wireless signal which may lead to intermittent connectivity and difficulty in reliable communication.</div>
+      <div style="color: #7f8c8d;"><em>Implications:</em> Weak signals can lead to dropped connections and may encourage users to connect to rogue access points that seem stronger.</div>
+      <div><strong>Recommendation:</strong> Consider repositioning the access point for better coverage or using a signal booster.</div>
     </div>
     </div>
 
