@@ -19,7 +19,7 @@
 <body>
   <div class="container">
     <h1>WiFi Evil Twin Audit</h1>
-    <p class="audit-time">Audit done at: 04.06.2025 14:45:02 (Riga, LV)</p>
+    <p class="audit-time">Audit done at: 04.06.2025 14:52:59 (Riga, LV)</p>
     <p>Rows in <span style="background:#ffcccc; padding:2px 5px;">red</span> are detected as Evil Twin based on real attacker logic.</p>
 
     <table>
@@ -52,22 +52,16 @@
       <h3 style="margin-bottom: 5px; color: #2c3e50;">Hidden SSID (Unknown BSSID)</h3>
       
     <div style="margin-bottom: 15px; border-left: 4px solid #3498DB; padding-left: 12px;">
-      <div style="font-weight: bold; color: #2c3e50;">Critical Security Issue: Weak or Unknown Encryption</div>
-      <div><strong>Description:</strong> The access point is using unknown encryption, which could mean weak or no encryption is implemented.</div>
-      <div style="color: #7f8c8d;"><em>Implications:</em> This makes the network susceptible to eavesdropping and unauthorized data interception.</div>
-      <div><strong>Recommendation:</strong> Implement strong encryption protocols such as WPA3 or at least WPA2.</div>
+      <div style="font-weight: bold; color: #2c3e50;">Critical Security Issue: Unknown Encryption</div>
+      <div><strong>Description:</strong> The encryption method used by the access point is reported as unknown, indicating potential use of weak or no encryption.</div>
+      <div style="color: #7f8c8d;"><em>Implications:</em> This poses a significant risk as unauthorized users may easily access the network and intercept sensitive data being transmitted.</div>
+      <div><strong>Recommendation:</strong> Ensure that the access point is configured to use strong encryption protocols, such as WPA3, and verify its settings to avoid using open or outdated encryption methods.</div>
     </div>
     <div style="margin-bottom: 15px; border-left: 4px solid #3498DB; padding-left: 12px;">
-      <div style="font-weight: bold; color: #2c3e50;">Exposure Vector: Hidden SSID with No Clients</div>
-      <div><strong>Description:</strong> Although the SSID is hidden, there are no connected clients, indicating low to no use.</div>
-      <div style="color: #7f8c8d;"><em>Implications:</em> A hidden SSID can offer a false sense of security but makes the network detectable through various means. Additionally, without clients, the network may be targeted for unauthorized access simply to gain entry to a hidden network.</div>
-      <div><strong>Recommendation:</strong> Consider broadcasting the SSID for visibility and implementing strong security measures.</div>
-    </div>
-    <div style="margin-bottom: 15px; border-left: 4px solid #3498DB; padding-left: 12px;">
-      <div style="font-weight: bold; color: #2c3e50;">Client-Related Issue: No Clients Associated</div>
-      <div><strong>Description:</strong> There are currently no clients associated with this access point, leading to uncertainty about potential security risks.</div>
-      <div style="color: #7f8c8d;"><em>Implications:</em> With no clients, there's currently no threat, but it suggests low usage which could impact security measures in place; in a compromised scenario, it could serve as bait for attackers.</div>
-      <div><strong>Recommendation:</strong> Regularly monitor for client connections and ensure security configurations are consistent to prevent unauthorized access.</div>
+      <div style="font-weight: bold; color: #2c3e50;">Exposure Vector: Hidden SSID</div>
+      <div><strong>Description:</strong> The access point has a hidden SSID which, while seemingly private, does not provide actual security against determined attackers who can still detect the network.</div>
+      <div style="color: #7f8c8d;"><em>Implications:</em> An attacker may still uncover the hidden SSID through monitoring and association, leading to unauthorized access or targeting of the network.</div>
+      <div><strong>Recommendation:</strong> Consider broadcasting the SSID to provide transparency to users and utilize strong authentication methods instead.</div>
     </div>
     </div>
 
